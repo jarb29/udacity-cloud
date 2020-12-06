@@ -29,7 +29,7 @@ import { Car, cars as cars_list } from './cars';
 
       if ( !name ) {
         return res.status(400)
-                  .send(`name is required`);
+                  .send(`name is required 1`);
       }
 
       return res.status(200)
@@ -43,7 +43,7 @@ import { Car, cars as cars_list } from './cars';
 
     if ( !name ) {
       return res.status(400)
-                .send(`name is required`);
+                .send(`name is required 2`);
     }
 
     return res.status(200)
@@ -54,16 +54,15 @@ import { Car, cars as cars_list } from './cars';
   // to demonstrate req.body
   // > try it by posting {"name": "the_name" } as 
   // an application/json body to {{host}}/persons
-  app.post( "/persons", 
+  app.post( "/persons/", 
     async ( req: Request, res: Response ) => {
 
       const { name } = req.body;
 
       if ( !name ) {
         return res.status(400)
-                  .send(`name is required`);
+                  .send(`name is required alex`);
       }
-
       return res.status(200)
                 .send(`Welcome to the Cloud, ${name}!`);
   } );
